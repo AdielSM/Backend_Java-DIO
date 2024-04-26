@@ -4,4 +4,5 @@ out/
 !**/src/test/**/out/
 .idea/
 *.iml
+src/Teste.java
 
