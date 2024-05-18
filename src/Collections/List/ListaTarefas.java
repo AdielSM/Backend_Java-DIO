@@ -14,8 +14,13 @@ public class ListaTarefas {
     }
 
     public void removerTarefa(String descricao){
+
+        if(this.tarefas.isEmpty()){
+            throw new IllegalArgumentException("Lista vazia");
+        }
+
         for (Tarefa tarefa : this.tarefas) {
-            if(tarefa.descricao().toLowerCase().equals(descricao)){
+            if(tarefa.descricao().equals(descricao.toLowerCase())){
                 this.tarefas.remove(tarefa);
                 return;
             }
